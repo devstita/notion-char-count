@@ -12,33 +12,12 @@
 <body>
 <textarea id="in" class="font" cols="100" rows="40" style="font-size: 18px;"></textarea>
 <br>
-<!-- <button id="btn" style="width: 100px; height: 60px;">! CLICK !</button> -->
 <p id="count" class="font">글자수: <span id="count_content">0</span></p>
 
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/devstita/notion-char-count" data-icon="octicon-star" aria-label="Star devstita/notion-char-count on GitHub">Star</a>
+
 <script type="text/javascript">
-	// document.getElementById("btn").onclick = function() {
-	// 	element = document.getElementById("in")
-	// 	val = element.value
-	// 	// console.log(val)
-
-	// 	val = val.replace(/\*/gi, "")
-	// 	val = val.replace(/#/gi, "")
-	// 	val = val.replace(/\n\s*\n/g, '\n')
-
-	// 	element.value = val
-
-	// 	// element.select()
-	// 	// document.execCommand("copy")
-	// 	// element.setSelectionRange(0, 0)
-	// 	// element.value = ""
-
-	// 	document.getElementById("count_content").innerText = val.length
-	// }
-
-	// document.getElementById("in").oninput = function() {
-	// 	document.getElementById("count_content").innerText = document.getElementById("in").value.length
-	// }
-
 	document.getElementById("in").oninput = function() {
 		console.log("input")
 		val = document.getElementById("in").value
@@ -50,5 +29,8 @@
 		document.getElementById("count_content").innerText = val.length
 	}
 </script>
+
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
 </html>
