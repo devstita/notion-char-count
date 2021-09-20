@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Notion SR</title>
+	<style type="text/css">
+		.font {
+			font-family: 'NanumBarunGothic';
+		}
+	</style>
+</head>
+<body>
+<textarea id="in" class="font" cols="100" rows="40" style="font-size: 18px;"></textarea>
+<br>
+<!-- <button id="btn" style="width: 100px; height: 60px;">! CLICK !</button> -->
+<p id="count" class="font">글자수: <span id="count_content">0</span></p>
+
+<script type="text/javascript">
+	// document.getElementById("btn").onclick = function() {
+	// 	element = document.getElementById("in")
+	// 	val = element.value
+	// 	// console.log(val)
+
+	// 	val = val.replace(/\*/gi, "")
+	// 	val = val.replace(/#/gi, "")
+	// 	val = val.replace(/\n\s*\n/g, '\n')
+
+	// 	element.value = val
+
+	// 	// element.select()
+	// 	// document.execCommand("copy")
+	// 	// element.setSelectionRange(0, 0)
+	// 	// element.value = ""
+
+	// 	document.getElementById("count_content").innerText = val.length
+	// }
+
+	// document.getElementById("in").oninput = function() {
+	// 	document.getElementById("count_content").innerText = document.getElementById("in").value.length
+	// }
+
+	document.getElementById("in").oninput = function() {
+		console.log("input")
+		val = document.getElementById("in").value
+		val = val.replace(/\*/gi, "")
+		val = val.replace(/#/gi, "")
+		val = val.replace(/\n\s*\n/g, '\n')
+		document.getElementById("in").value = val
+
+		document.getElementById("count_content").innerText = val.length
+	}
+</script>
+</body>
+</html>
